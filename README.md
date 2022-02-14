@@ -1,7 +1,8 @@
 # GameserverMonitor
-Use Google Apps Script to monitor your Nitrado Gameserver
+Use Google Apps Script to monitor your Nitrado Gameserver.
+Particularly useful for DAYZ servers.
 
-You can use Google Apps Script to check your server every 5 minutes and restart it if it did not gracefully restart automatically after a messages.xml shutdown.
+You can use Google Apps Script to check your server every 5 minutes and restart it if it did not gracefully restart automatically after a DAYZ messages.xml shutdown.
 Messages.xml is better than Nitrado Automated Tasks because the server shutdown will match the warning messages players see in the bottom left corner of the screen.
 Failed automatic restarts are rare but seem to happen more often when "Reduce log output" is unchecked.
 
