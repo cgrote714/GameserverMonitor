@@ -5,7 +5,11 @@ function myFunction() {
   const server_id = 00000000;
   
   checkServer(nitrado_token, server_id, discordUrl); 
-  //you can check multiple servers for multiple discords
+	
+  //Or you can check multiple servers for multiple discords
+  //checkServer(nitrado_token, 00000000, discordUrl);
+  //checkServer(nitrado_token, 00000001, discordUrl);
+  //etc.
 }
 
 function checkServer(nitrado_token, nitrado_server_id, discordUrl) {
