@@ -1,7 +1,7 @@
 function myFunction() {
   //substitute your values these are non-working examples
   const nitrado_token = "u5GNLTEXLHTI-23l4DJv5rUbiplbX4dnwDILbt4Xp4rvWlUL5QVsKJK6bX1YdjtQC3tTu7N26cuD_M9bSIE50D9bhR0VH8L7Wn_q"; 
-  const discordUrl = 'https://discord.com/api/webhooks/053117534551023489/s7N5fua6csXn_75w8VOkH8lehEaZIGNDw82P0EFZ-wDwxgnhwhvQ2-xtDjUDeQN2TBqi';
+  const discordUrl = "https://discord.com/api/webhooks/053117534551023489/s7N5fua6csXn_75w8VOkH8lehEaZIGNDw82P0EFZ-wDwxgnhwhvQ2-xtDjUDeQN2TBqi";
   const server_id = 00000000;
   
   checkServer(nitrado_token, server_id, discordUrl); 
@@ -36,7 +36,7 @@ function checkServer(nitrado_token, nitrado_server_id, discordUrl) {
       var laststatus = "";
     }
 
-	//basic Nitrado ping
+    //basic Nitrado ping
     var response = UrlFetchApp.fetch("https://api.nitrado.net/ping");
     var healthcheck = JSON.parse(response);
     if (healthcheck.status != "success")
@@ -47,7 +47,7 @@ function checkServer(nitrado_token, nitrado_server_id, discordUrl) {
       return;
     }
 	
-	//Nitrado maintenance check
+    //Nitrado maintenance check
     var response = UrlFetchApp.fetch("https://api.nitrado.net/maintenance");
     var maintenance = JSON.parse(response);
     if (
@@ -69,7 +69,7 @@ function checkServer(nitrado_token, nitrado_server_id, discordUrl) {
       return;
     }
 
-	//find server_id in list of services
+    //find server_id in list of services
     var response = UrlFetchApp.fetch("https://api.nitrado.net/services", header);
     var services = JSON.parse(response);
     
